@@ -1,0 +1,96 @@
+#artInfoCol {
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: 
+        "portrait-name portrait-name"
+        "portrait details";
+}
+
+body {
+    grid-template-columns: 8% 5fr 1fr 8%;
+    grid-template-areas: 
+    ". header header ."
+    ". art-info aside ."
+    "footer footer footer footer";
+}
+
+picture p {
+    margin-bottom: 1em;
+}
+
+#insertedBox {
+    background-color: rgb(243, 246, 252);
+    background-size: 1px;
+    border-color: rgb(223, 223, 223);
+    padding: 3% 9% 3% 2%;
+}
+
+#insertedBox label {
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+
+#insertedBox input {
+    padding: 0.6em;
+    font-size: 0.9em;
+    max-width: 70%;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 4px;
+}
+
+#insertedBox input[type="date"]{
+    padding: 1em;
+    max-width: 55%;
+}
+
+#insertedBox select {
+    max-width: 55%;
+    background-color: rgb(223, 223, 223);
+    padding: 0.5em;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 4px;
+}
+
+#insertedBox button {
+    width: 40%;
+    padding: 0.5em;
+    font-weight: normal;
+}
+
+#insertedBox legend{
+    width: 100%;
+    font-size: 1.3rem;
+    color: rgb(91, 91, 91);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    margin-bottom: 1.5em;
+}
+
+#account > div {
+    grid-column: 1;
+}
+
+#termsField {
+    margin: 2% 0;
+}
+
+#termsField input {
+    border: 2px solid rgb(223, 223, 223);
+    margin-right: 1%;
+}
+
+#insertedBox fieldset div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    justify-content: flex-start;
+}
+
+#insertedBox fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+    justify-content: start;
+    row-gap: 1em;
+    margin-top: 1.5em;
+}
