@@ -14,11 +14,11 @@
         z-index: -1;
     }
 
-    .footer-item4 form {
+    .footer-item4 #contact-form {
         display: none;
     }
 
-    .footer-item4 form:target {
+    .footer-item4 #contact-form:target {
         display: block;
         width: 50vw;
     }
