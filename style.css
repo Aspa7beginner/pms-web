@@ -9,7 +9,7 @@
     - at the very bottom styles about the table/form section in main
         (varies in content through different html pages of the 2nd project) 
 
-
+*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Lato&family=Leckerli+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:wght@300&display=swap');
 
 /*############# general #######################################################*/
@@ -88,6 +88,7 @@ header .container > div {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    border-radius: 0;
 }
 
 #topHeaderRow {
@@ -395,7 +396,7 @@ footer li {
 /* footer contact section */
 
 .footer-item4 form div label {
-    display: none;
+    font-size: 0;
 }
 
 .field {
@@ -413,29 +414,61 @@ footer li {
     width: 100%;
 }
 
+.footer-item4 h4 a {   /*for dropdown*/
+    display:none;
+}
+
 /* end footer contact section */
 
 
 /* footer copyright */
-.footer-item5 {
-    position: absolute;
-    bottom:0;
-    left: 0;
-    width: 100%;
-    background-color: #3A3A3A;  
+
+@media (max-width: 700px){
+    .footer-item4 {
+        margin-bottom: 2rem;
+    }
+
+    .footer-item5{
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width: fit-content;
+        padding: 0.5rem;
+        border-radius: 0;
+        background-color: #3A3A3A;
+        font-size: min(2.5vw, 0.8rem);
+        text-align: center;
+        color: rgb(172, 172, 172);
+    }
+
+    .footer-item5 span {
+        display: inline-block;
+    }
 }
 
-.footer-item5 p {
-    --side: calc((100% - 1300px) / 2);
-    margin: 0 var(--side) 0 var(--side);
-    padding: .5rem 0;
-    font-size: 0.85rem;
-    color: rgb(231, 231, 231);
+@media (min-width: 701px){
+    .footer-item5 {
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width: min(100vw, 100%);
+        border-radius: 0;
+        background-color: #3A3A3A;  
+    }
+    
+    .footer-item5 p {
+        --side: calc((100% - 1300px) / 2);
+        margin: 0 var(--side) 0 var(--side);
+        padding: .5rem 0;
+        font-size: 0.8rem;
+        color: rgb(172, 172, 172);
+    }
+    
+    .footer-item5 span {
+        float: right;
+    }
 }
 
-.footer-item5 span {
-    float: right;
-}
 
 /* end footer copyright */
 
@@ -482,7 +515,7 @@ picture p {
     background-color: rgb(243, 246, 252);
 }
 
-form fieldset {
+#insertedBox fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 2rem;
@@ -490,14 +523,14 @@ form fieldset {
     margin-top: 1.5rem;
 }
 
-form fieldset div {
+#insertedBox fieldset div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     row-gap: 0.5em;
 }
 
-form legend{
+#insertedBox legend{
     width: 100%;
     margin-bottom: 1.2rem;
     border-bottom: 1px solid rgb(223, 223, 223);
@@ -507,12 +540,12 @@ form legend{
     color: rgb(91, 91, 91);
 }
 
-form label {
+#insertedBox label {
     font-size: 0.9em;
     font-weight: bolder;
 }
 
-form input { 
+#insertedBox form input { 
     max-width: 80%;
     padding: 0.55rem;
     border: 1px solid rgb(223, 223, 223);
@@ -520,12 +553,12 @@ form input {
     font-size: 0.75rem;
 }
 
-form input[type="date"]{
+#insertedBox input[type="date"]{
     max-width: 70%;
     padding: 0.8rem;
 }
 
-form select {
+#insertedBox select {
     max-width: 70%;
     padding: 0.5em;
     border: 1px solid rgb(223, 223, 223);
@@ -534,7 +567,7 @@ form select {
     font-size: 0.75rem;
 }
 
-form button {
+#insertedBox button {
     width: 40%;
     padding: 0.5rem;
     font-weight: normal;

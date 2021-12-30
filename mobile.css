@@ -1,0 +1,24 @@
+@media (max-width: 700px) {
+    * {
+        font-size: min(4vw, 1em);
+    }
+    .footer-item1,  /* υπάρχει σύνδεσμος στο κύριο μενού */
+    .footer-item3 {    /* υπάρχει η πληροφορία στο καλάθι */
+        display: none;
+    }
+
+    .footer-item4 h4 a {    /*for dropdown*/
+        display:unset;
+        text-align: center;
+        color: black;
+    }
+
+    .footer-item4 form {
+        display: none;
+    }
+
+    .footer-item4 form:target {
+        display: block;
+    }
+
+}
