@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px 0px;
+        }
+        
+        @media (max-width: 700px) {
+            .main-container {
+                display: grid;
+                grid-template-areas: 'main' 'similar' 'aside';
+                grid-gap: 5px;
+                padding: 10px;
+                padding: 10px;
+            }
+        }
+        
+        @media (min-width: 701px) {
+            .main-container {
+                display: grid;
+                grid-template-areas: 'main main main main main aside''similar similar similar similar similar aside';
+                grid-gap: 5px;
+                padding: 10px;
+            }
+        }
+        
+        .grid-container {
+            display: grid;
+            /* κάθε γραμμή του πλέγματος περικλείεται σε αποστρόφους */
+            grid-template-areas: 'header header header header header header' 'main main main main main main' 'footer footer footer footer footer footer';
+            grid-gap: 1px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+        
+        .item1 {
+            grid-area: header;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .item2 {
+            grid-area: main;
+        }
+        
+        .item3 {
+            grid-area: footer;
+        }
+        
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        
+        .container {
+            max-width: 1190px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: auto;
+            border: solid 1px#0963ae;
+        }
+        
+        .main-item1 {
+            grid-area: main;
+            background-color: #2cf321e9;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .main-item2 {
+            grid-area: similar;
+            background-color: #2cf321e9;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .main-item3 {
+            grid-area: aside;
+            background-color: #2cf321e9;
+        }
+        
+        @media (min-width: 701px) {
+            .footer-container {
+                display: grid;
+                grid-template-areas: 'footer1 footer2 footer3 footer4''copy copy copy copy';
+                grid-gap: 5px;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .footer-container {
+                display: grid;
+                grid-template-areas: 'footer1' 'footer2' 'footer3' 'footer4' 'copy';
+                grid-gap: 5px;
+                padding: 10px;
+            }
+        }
+        
+        .footer-item1 {
+            grid-area: footer1;
+            background-color: #2cf321e9;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .footer-item2 {
+            grid-area: footer2;
+            background-color: #2cf321e9;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .footer-item3 {
+            grid-area: footer3;
+            background-color: #2cf321e9;
+        }
+        
+        .footer-item4 {
+            grid-area: footer4;
+            background-color: #2cf321e9;
+        }
+        
+        .footer-item5 {
+            grid-area: copy;
+            background-color: #2cf321e9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="item1">
+            <div class="container"> Header</div>
+
+        </div>
+        <div class="item2">
+            <div class="container">
+                <div class="main-container">
+                    <div class="main-item1">main</div>
+                    <div class="main-item2">similar</div>
+                    <div class="main-item3">aside</div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="item3">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-item1">Footer 1</div>
+                    <div class="footer-item2">Footer 2</div>
+                    <div class="footer-item3">Footer 3</div>
+                    <div class="footer-item4">Footer 4</div>
+                    <div class="footer-item5">copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
