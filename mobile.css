@@ -27,7 +27,7 @@
         margin: 0 0 2rem 2rem;
         transition: margin 1s ease-out;
     }
-    .item:nth-child(even):focus, .item:nth-child(even):hover{
+    .item:nth-child(even):active, .item:nth-child(even):hover{
         margin: 0px;
         transition: margin 1s ease-out;
     }
