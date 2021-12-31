@@ -23,11 +23,11 @@
 
     }
 
-    .item:nth-child(even){
+    .item{
         margin: 0 0 2rem 2rem;
         transition: margin 1s ease-out;
     }
-    .item:nth-child(even):active, .item:nth-child(even):hover{
+    .item:active, .item:hover, .item:focus{
         margin: 0px;
         transition: margin 1s ease-out;
     }
