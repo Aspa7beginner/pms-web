@@ -15,13 +15,9 @@
 
     .footer-item4 form {
         width: 17rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.5rem;
+        row-gap: 1rem;
     }
 
-    
     .footer-item4 .input,
     .footer-item4 button {
         padding: 1rem;
@@ -45,15 +41,14 @@
         left: 0vw;
     }
 
-    .close,
-    .footer-item4 legend {
-        position: fixed;
+    .close {
+        position: relative;
         display: block;
     }
 
     .close::after {
-        left: 17rem;
-        top: -10rem; /* inside the form, so negative value to move at the top of the screen */
+        right: -1rem;
+        top: -3rem; /* inside the form, so it needs negative value to move at the top of the screen */
         width: 2.5rem;
         height: 2.5rem;
         position: absolute;
@@ -68,7 +63,8 @@
     } 
 
     .footer-item4 legend {
-        top: 8rem;
+        position: absolute;
+        bottom: calc(50vh + 11rem);
         width: 17rem;
         padding-top: .5rem;
         border-bottom: 2px solid var(--bg-gray);        
