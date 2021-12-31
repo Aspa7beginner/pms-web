@@ -3,12 +3,17 @@
         font-size: min(4vw, 1em);
     }
 
-    /*################ removed elements ##############################*/
-
     .responsive-effects {    /* design in footer for dropdown icons in general additional elements for mobile*/
         display: unset;
         text-align: center;
     }
+
+    /*################ removed elements ##############################*/
+
+    .footer-item1,
+    .footer-item3 {
+        display: none;
+    } 
 
     /*################ end removed elements ########################*/
     
