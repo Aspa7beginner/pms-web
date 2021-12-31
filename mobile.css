@@ -3,10 +3,17 @@
         font-size: min(4vw, 1em);
     }
 
+    /*################ removed elements ##############################*/
+
     .responsive-effects {    /* design in footer for dropdown icons in general additional elements for mobile*/
         display: unset;
         text-align: center;
     }
+
+    /*################ end removed elements ########################*/
+    
+    
+    /*########## similar products #######################################################*/
 
     #productsRow {
         max-width: 90vw;
@@ -27,17 +34,16 @@
     .item > div {
         padding: 0 0 3px 5px;
     }
+
     .item:focus, .item:hover{
         box-shadow: 0px 2px 2px 2px rgba(45, 71, 100, 0.2), 3px 2px 1px 0 rgba(129, 178, 241, 0.19);   
         transition: box-shadow 0.5s ease-out;
     }
 
+    /*########## end similar products #######################################################*/
+
+
     /*#################### footer #######################################*/
-    
-    .footer-item1,  /* υπάρχει σύνδεσμος στο κύριο μενού */
-    .footer-item3 {    /* υπάρχει η πληροφορία στο καλάθι */
-        display: none;
-    }
     
     .footer-item4 form {
         width: 17rem;
@@ -104,5 +110,6 @@
         color: rgb(91, 91, 91);
     }
 
+    /*#################### end footer #######################################*/
 
 }
