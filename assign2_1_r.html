@@ -19,8 +19,7 @@
             }
 
             .container {
-                display: contents;
-            }
+                display: contents;  /*remove unwanted space (avoid horizontal scrolling/overflow)*/           }
         }
         
         @media (min-width: 701px) {
@@ -116,7 +115,6 @@
                 display: grid;
                 grid-template-areas: 'footer1' 'footer2' 'footer3' 'footer4' 'copy';
                 grid-gap: 5px;
-                padding: 10px;
             }
         }
 
@@ -277,7 +275,7 @@
                     <section class="main-item2">
                         <h3>Similar Products </h3>
                         <div id="productsRow">
-                            <div class="item first">
+                            <div class="item first" tabindex="1">
                                 <img src="images/thumbs/116010.jpg" alt="...">
                                 <div>
                                     <p class="similarTitle"><a href="#">Artist Holding a Thistle</a></p>
@@ -417,7 +415,7 @@
                     </div>
                     
                     <div class="footer-item4">
-                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects"><i class="fas fa-sort-down"></i></a></h4>
+                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects"><i class="fas fa-plus-circle"></i></a></h4>
                         <fieldset id="contact-form-appear">  
                             <legend class="responsive-effects">Contact</legend> 
                             <form> <a tabindex= "1" href="#footer-top" class="close"></a>

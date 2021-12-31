@@ -8,7 +8,18 @@
         text-align: center;
     }
 
+    #productsRow {
+        max-width: 90vw;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        padding-bottom: 1rem;
+    }
 
+    .item:focus{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    }
     /*#################### footer #######################################*/
     
     .footer-item1,  /* υπάρχει σύνδεσμος στο κύριο μενού */
