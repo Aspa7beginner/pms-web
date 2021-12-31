@@ -14,12 +14,23 @@
         flex-wrap: nowrap;
         overflow-x: scroll;
         scroll-behavior: smooth;
-        padding-bottom: 1rem;
+        padding: 1rem 0.1rem;
     }
 
-    .item:focus{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    .item {
+        border:0;
+        box-shadow: 0px 1px 2px 1px rgba(45, 71, 100, 0.2), 1px 2px 2px 0 rgba(129, 178, 241, 0.19);   
+
     }
+
+    .item:nth-child(even){
+        transition: margin 1s ease-out;
+    }
+    .item:nth-child(even):hover{
+        margin: 1rem;
+        transition: margin 1s ease-out;
+    }
+
     /*#################### footer #######################################*/
     
     .footer-item1,  /* υπάρχει σύνδεσμος στο κύριο μενού */
