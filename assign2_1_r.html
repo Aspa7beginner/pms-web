@@ -418,22 +418,24 @@
                     </div>
                     
                     <div class="footer-item4">
-                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form"><i class="fas fa-sort-down"></i></a></h4>
-                        <form id="contact-form">  
-                            <div class="field">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" class="input" name="name" placeholder="Enter Name ..." pattern="[A-Za-z\.\- ]+[A-Za-z]$" title="only a-z A-Z . or -">
-                            </div>
-                            <div class="field">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="input" name="email" placeholder="Enter email ...">
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea id="message" class="input" name="message" rows="4" maxlength="1000" placeholder="Enter message ..." pattern="^[\w. ]{0,1000}+[\w.]$"></textarea>
-                            </div>
-                            <button type="submit">Submit</button>
-                        </form>
+                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects"><i class="fas fa-sort-down"></i></a></h4>
+                        <fieldset id="contact-click-disappear">  
+                            <form id="contact-form-appear">  <a tabindex="1" href="#contact-click-disappear" class="responsive-effects"><i class="fas fa-sort-up"></i></a>
+                                <div class="field">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="input" name="name" placeholder="Enter Name ..." pattern="[A-Za-z\.\- ]+[A-Za-z]$" title="only a-z A-Z . -">
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" class="input" name="email" placeholder="Enter email ...">
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" class="input" name="message" rows="4" maxlength="1000" placeholder="Enter message ..." pattern="^[\w. ]{0,1000}+[\w.]$"></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </fieldset>
                     </div>
                     
                     <div class="footer-item5">
