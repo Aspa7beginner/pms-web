@@ -7,7 +7,7 @@
         display: none;
     }
 
-    .responsive-effects {    /*for dropdown*/
+    .responsive-effects {    /* design in footer for dropdown icons in general additional elements for mobile*/
         display: unset;
         text-align: center;
     }
@@ -24,6 +24,7 @@
     .footer-item4 a[href$=appear] {
         color: rgb(91, 91, 91);
     }
+
     .footer-item4 a[href$=disappear] {
         position: absolute;
         width: 0.5em;
