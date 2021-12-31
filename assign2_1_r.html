@@ -56,7 +56,6 @@
         .item3 {
             grid-area: footer;
             background-color: rgb(231, 231, 231);
-            position: relative;
         }
         
         @media (max-width: 700px) {
@@ -374,9 +373,9 @@
         </div>
 
 
-        <footer class="item3">
+        <footer class="item3"> 
             <div class="container">
-                <div class="footer-container">
+                <div class="footer-container"> <div id="footer-top"></div>
                     <div class="footer-item1">
                         <h4><i class="fas fa-info-circle"></i> About Us</h4>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>            
@@ -419,8 +418,9 @@
                     
                     <div class="footer-item4">
                         <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects"><i class="fas fa-sort-down"></i></a></h4>
-                        <fieldset id="contact-click-disappear">  
-                            <form id="contact-form-appear">  <a tabindex="1" href="#contact-click-disappear" class="responsive-effects"><i class="fas fa-sort-up"></i></a>
+                        <fieldset id="contact-form-appear">  
+                            <legend class="responsive-effects">Contact</legend> 
+                            <form> <a href="#footer-top" class="close"></a>
                                 <div class="field">
                                     <label for="name">Name</label>
                                     <input type="text" id="name" class="input" name="name" placeholder="Enter Name ..." pattern="[A-Za-z\.\- ]+[A-Za-z]$" title="only a-z A-Z . -">
