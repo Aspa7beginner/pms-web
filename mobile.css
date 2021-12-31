@@ -28,6 +28,9 @@
         display: none;
     }
 
+    .footer-item4  h4 {
+        margin-bottom: 1rem;
+    }
     .footer-item4 fieldset:target {
         border-radius: 0;
         display: flex;
