@@ -17,12 +17,14 @@
     } 
 
     /*################ end removed elements ########################*/
-    #insertedBox table div#table-appear {
+    
+    table tbody#table-appear {
         display: none;
     }
     
-    #insertedBox table div#table-appear:target {
+    table tbody#table-appear:target {
         display: unset;
+
     }
 
     #insertedBox table th,
@@ -36,6 +38,7 @@
         background-color: white;
         border-bottom: 1px solid var(--bg-gray);
         border-radius: 0;
+        font-size: 1.3em;
     }
 
     #insertedBox table a[href$=appear] {
@@ -44,21 +47,20 @@
         float: right;
     }
 
-    #insertedBox table a[href$=disappear] {
-        position: absolute;
-        width: 0.6em;
-        height: 0.6em;
-        top: 50vw;
-        left: 25vw;
-        background-color: rgb(231, 231, 231);
-        font-size: 2em;
-        color: rgb(91, 91, 91);
+    #insertedBox tr:first-of-type {
+        position: relative;
     }
 
-    table form a:first-of-type i{
+    #insertedBox tr:first-of-type a.close {
         position: absolute;
-        right:3px;
-        top: 3px;
+        width: 2rem;
+        height: 1rem;
+        top: -1.5rem;
+        right: -10rem;
+        background-color: white;
+        font-size: 1rem;
+        color: rgb(91, 91, 91);
+        vertical-align: bottom;
     }
 */
 
@@ -116,12 +118,12 @@
         background-color: rgba(91, 91, 91, 0.89);   
     }
 
-    .close {
+    .footer-item4 .close {
         position: relative;
         display: block;
     }
 
-    .close::after {
+    .footer-item4 .close::after {
         position: absolute;
         right: -1rem;
         top: -4rem;/* inside the form, so it needs negative value to move at the top of the screen */
