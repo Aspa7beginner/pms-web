@@ -72,6 +72,9 @@ img {
     padding: 1%;
 }
 
+.responsive-active-only {
+    pointer-events: none;
+}
 /*########### end general ##########################################################*/
 
 
