@@ -84,8 +84,8 @@
     #table-expand::before {     /* to avoid moving the screen at the begining of the table when opened */
         content: '';
         display: block;
-        height: 50vh; /* increase the size of the box at where the anchor should focus after visited*/
-        margin-top: -50vh; /* move the contents as where they were */
+        height: 60vh; /* increase the size of the box at where the anchor should focus after visited*/
+        margin-top: -60vh; /* move the contents as where they were */
         visibility: hidden;
     }
 
