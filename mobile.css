@@ -17,34 +17,34 @@
     } 
 
     /*################ end removed elements ########################*/
-    table > div {
+    #insertedBox table div#table-appear {
         display: none;
     }
     
-    table>div:target {
+    #insertedBox table div#table-appear:target {
         display: unset;
     }
 
-    table th,
-    table td,
+    #insertedBox table th,
+    #insertedBox table td,
     #insertedBox {
         border:0; 
         font-size: min(3vw, 1em);
     }
     
-    table caption {
+    #insertedBox table caption {
         background-color: white;
         border-bottom: 1px solid var(--bg-gray);
         border-radius: 0;
     }
 
-    table a[href$=appear] {
+    #insertedBox table a[href$=appear] {
         padding-left: 1vw ;
         color: rgb(91, 91, 91);
         float: right;
     }
 
-    table a[href$=disappear] {
+    #insertedBox table a[href$=disappear] {
         position: absolute;
         width: 0.6em;
         height: 0.6em;
