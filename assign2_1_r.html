@@ -13,7 +13,7 @@
         @media (max-width: 700px) {
             .main-container {
                 display: grid;
-                grid-template-areas: 'main' 'similar' 'aside';
+                grid-template-areas: 'main'  'aside' 'similar';
                 grid-gap: 5px;
                 padding: 10px;
             }
@@ -240,31 +240,33 @@
                                 for placement in the grid template. -->
                             <div id="insertedBox">
                                 <table>
-                                    <caption>Product Details</caption>
-                                    <tr>
-                                        <th>Date:</th>
-                                        <td>1782</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Medium:</th>
-                                        <td>Oil on canvas</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Dimensions:</th>
-                                        <td>98cm x 71cm</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Home:</th>
-                                        <td><a href="#">National Gallery, London</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Genres:</th>
-                                        <td><a href="#">Realism</a>, <a href="#">Rococo</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Subjects:</th>
-                                        <td><a href="#">People</a>, <a href="#">Arts</a></td>
-                                    </tr>
+                                    <caption>Product Details<a href="#table-appear" class="responsive-effects"><i class="fas fa-sort-down"></i></a></caption>
+                                    <div id="table-appear" tabindex="1"> <a tabindex= "1" href="#inserted-box" class="close"></a>
+                                        <tr>
+                                            <th>Date:</th>
+                                            <td>1782</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Medium:</th>
+                                            <td>Oil on canvas</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dimensions:</th>
+                                            <td>98cm x 71cm</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Home:</th>
+                                            <td><a href="#">National Gallery, London</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Genres:</th>
+                                            <td><a href="#">Realism</a>, <a href="#">Rococo</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Subjects:</th>
+                                            <td><a href="#">People</a>, <a href="#">Arts</a></td>
+                                        </tr>
+                                    </div>
                                 </table>
                             </div>
                             <!-- end insertedBox -->

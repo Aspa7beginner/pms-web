@@ -10,14 +10,58 @@
 
     /*################ removed elements ##############################*/
 
-    .footer-item1,
-    .footer-item3 {
+    .footer-item1,   /* already in main navigation*/
+    .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
+    #cartInfo {     /* same as previous one */
         display: none;
     } 
 
     /*################ end removed elements ########################*/
+    table > div {
+        display: none;
+    }
     
+    table>div:target {
+        display: unset;
+    }
+
+    table th,
+    table td,
+    #insertedBox {
+        border:0; 
+        font-size: min(3vw, 1em);
+    }
     
+    table caption {
+        background-color: white;
+        border-bottom: 1px solid var(--bg-gray);
+        border-radius: 0;
+    }
+
+    table a[href$=appear] {
+        padding-left: 1vw ;
+        color: rgb(91, 91, 91);
+        float: right;
+    }
+
+    table a[href$=disappear] {
+        position: absolute;
+        width: 0.6em;
+        height: 0.6em;
+        top: 50vw;
+        left: 25vw;
+        background-color: rgb(231, 231, 231);
+        font-size: 2em;
+        color: rgb(91, 91, 91);
+    }
+
+    table form a:first-of-type i{
+        position: absolute;
+        right:3px;
+        top: 3px;
+    }
+*/
+
     /*########## similar products #######################################################*/
 
     #productsRow {
@@ -26,23 +70,17 @@
         flex-wrap: nowrap;
         overflow-x: scroll;
         scroll-behavior: smooth;
-        padding: 1rem 0.1rem;
+        padding: 0.1rem 0.1rem;
     }
 
     .item {
         border:0;
-        margin: 0 0 2rem 2rem;
+        margin: 0 0 1.5rem 2rem;
         box-shadow: 0px 1px 2px 1px rgba(45, 71, 100, 0.2), 1px 2px 2px 0 rgba(129, 178, 241, 0.19);   
-        transition: box-shadow 0.4s ease-out;
     }
 
     .item > div {
         padding: 0 0 3px 5px;
-    }
-
-    .item:focus, .item:hover, .item:active{
-        box-shadow: 0px 2px 2px 2px rgba(45, 71, 100, 0.2), 3px 2px 1px 0 rgba(129, 178, 241, 0.19);   
-        transition: box-shadow 0.5s ease-out;
     }
 
     /*########## end similar products #######################################################*/
