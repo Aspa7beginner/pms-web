@@ -15,8 +15,7 @@
 
     .footer-item1,   /* already in main navigation*/
     .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
-    #topHeaderRow li:nth-child(n+3), /* unnecessary, when clicking on cart there is a transition activating the cart section in the aside */
-    .popularCategory /* take too much space */
+    #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section in the aside */
     {
         display: none;
     } 
@@ -28,6 +27,115 @@
     }
     /*################ end removed elements ########################*/
     
+
+
+    /*################## header ###################################*/
+    h1 {
+        padding-left: 1rem;
+    }
+
+    header .container {
+        row-gap: 1rem;
+    }
+    #topHeaderRow > p {
+        font-size: min(3vw, 1em);
+    }
+
+    #topHeaderRow > p a {
+        font-size: min(4vw, 1em);
+        font-weight: bolder;
+    }
+
+    #topHeaderRow li {
+        padding: 0 0.5rem;
+    }
+
+    #logoRow {
+        grid-area: row3;
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 0.5rem;
+    }
+
+    #logoRow form {
+        width: 90vw;
+        border: 1px solid var(--bg-gray)
+    }
+
+    #logoRow button {
+        border: 0;
+    }
+
+    #logoRow input {
+        width: 70vw;
+        border: 0px;
+        padding: 0.8rem;
+        border-right: 1px solid var(--bg-gray);
+    }
+
+    #logoRow form label {
+        font-size: 1px;
+    }
+
+    #mainNavigationRow {
+        grid-area: row2;
+        display: grid;
+        grid-template-areas: "nav-container-item1 nav-container-item2"
+                            "nav-container-item1 .";
+    }
+
+    #mainNavigationRow > a {
+        grid-area: nav-container-item2;
+    }
+    #mainNavigationRow nav {
+        grid-area: nav-container-item1;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        right: -100vw;
+        top:0;
+        background-color: black;
+        border: 0;
+        display: grid;
+        grid-template-columns: calc(100vw - 4rem) 3rem;
+        grid-template-rows: 1.5rem min(10vw,10vh) auto;
+        grid-template-areas:
+                            ". nav-item1"
+                            ". nav-item1"
+                            "nav-item2 nav-item1"
+                            ;
+    }
+
+    #mainNavigationRow nav > a {
+        grid-area: nav-item1;
+        background-color: black;
+    }
+
+    #mainNavigationRow nav > a i {
+        font-size: 2rem;
+        margin: 1rem ;
+    }
+
+    #mainNavigationRow nav ul {
+        grid-area: nav-item2;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mainNavigationRow nav ul::before {
+        position: absolute;
+        top:0;
+        height: 16vw;
+        width: 85vw;
+        vertical-align: middle;
+        left: 0;
+        color: white;
+        background-color: green;
+        content: "Art Store";
+    }
+    /*################## header ###################################*/
+
 
     /*########################## main ##############################*/
 
@@ -113,9 +221,7 @@
     }
 
     .item {
-        border:0;
         margin: 0 0 1.5rem 2rem;
-        box-shadow: 0px 1px 2px 1px rgba(45, 71, 100, 0.2), 1px 2px 2px 0 rgba(129, 178, 241, 0.19);   
     }
 
     .item > div {
@@ -123,10 +229,9 @@
     }
 
     /*########## end similar products #############################################*/
+    
+    /*### cart aside ####*/
 
-
-
-    /*########## end similar products #############################################*/
 
     #cartInfo {
         position: fixed;

@@ -79,6 +79,7 @@ img {
 
 
 /* ########## header #############################################################*/
+
 header .container{
     grid-area: header;
     display: grid;

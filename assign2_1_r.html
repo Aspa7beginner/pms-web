@@ -13,7 +13,7 @@
         @media (max-width: 700px) {
             .main-container {
                 display: grid;
-                grid-template-areas: 'main'  'aside' 'similar';
+                grid-template-areas: 'main' 'similar' 'aside';
                 grid-gap: 5px;
                 padding: 10px;
             }
@@ -186,7 +186,9 @@
                 <!-- end logoRow -->
         
                 <div id="mainNavigationRow">
-                    <nav>
+                    <a href="#navigationMain" class="responsive-effects"><i class="fas fa-bars"></i></a>
+                    <nav id="navigationMain">
+                        <a href="#" class="responsive-effects"><i class="far fa-window-close"></i></a>
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About Us</a></li>
@@ -346,13 +348,34 @@
                         <div class="popularCategory">
                             <h3>Popular Artists</h3>
                             <ul>
-                                <li><a href="#">Caravaggio</a></li>
-                                <li><a href="#">Cezanne</a></li>
-                                <li><a href="#">Matisse</a></li>
-                                <li><a href="#">Michelangelo</a></li>
-                                <li><a href="#">Picasso</a></li>
-                                <li><a href="#">Raphael</a></li>
-                                <li><a href="#">Van Gogh</a></li>
+                                <li>
+                                    <img src="images/artists/101.jpg" class="responsive-effects" title="Caravaggio" alt="Caravaggion">
+                                    <a href="#">Caravaggio</a>
+                                </li>
+                                <li>
+                                    <img src="images/artists/20.jpg" class="responsive-effects" title="Cezanne" alt="Cezanne">
+                                    <a href="#">Cezanne</a>
+                                </li>
+                                <li>
+                                    <img src="images/artists/23.jpg" class="responsive-effects" title="Matisse" alt="Matisse">
+                                    <a href="#">Matisse</a>
+                                </li>
+                                <li>
+                                    <img src="images/artists/98.jpg" class="responsive-effects" title="Michelangelo" alt="Michelangelo">
+                                    <a href="#">Michelangelo</a>
+                                </li>
+                                <li>
+                                    <img src="images/artists/22.jpg" class="responsive-effects" title="Picasso" alt="Picasso">
+                                    <a href="#">Picasso</a>
+                                </li>
+                                <li>
+                                    <img src="images/artists/99.jpg" class="responsive-effects" title="Raphael" alt="Raphael">
+                                    <a href="#">Raphael</a>
+                                </li>
+                                <li>
+                                    <img src="images/artists/19.jpg" class="responsive-effects" title="Van Gogh" alt="Van Gogh">
+                                    <a href="#">Van Gogh</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="popularCategory">
