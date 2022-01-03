@@ -158,6 +158,9 @@
         row-gap: 1%;
     }   
 
+    picture {
+        text-align: center;
+    }
     #portraitDesc {
         grid-row: 3;
     }
@@ -196,20 +199,30 @@
     /*########## similar products as a vertical scroll bar ###################*/
 
     #productsRow {
-        max-width: 90vw;
+        max-width: 93vw;
         display: flex;
         flex-wrap: nowrap;
         overflow-x: scroll;
         padding: 0.1rem 0.1rem;
+        background-color: rgb(216, 211, 201);
     }
 
     .item {
         margin: 0 0 1.5rem 2rem;
     }
+    .item img {
+        border: 5px solid rgba(59, 57, 44, 0.884);
+    }
 
     .item > div {
         padding: 0 0 3px 5px;
+        text-align: center;
     }
+
+    .item p a {
+        color: rgb(91, 91, 91);
+        font-size: 1rem;
+    } 
 
     /*########## end similar products #############################################*/
     
