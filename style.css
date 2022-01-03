@@ -447,6 +447,10 @@ footer li {
     .footer-item5 span {
         display: inline-block;
     }
+
+    footer > div {
+        padding: 0;
+    }
 }
 
 @media (min-width: 701px){
