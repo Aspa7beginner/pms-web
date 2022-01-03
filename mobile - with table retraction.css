@@ -189,6 +189,35 @@
         font-size: 1.3em;
     }
 
+    #insertedBox table a[href$=expand] {
+        padding-left: 1vw ;
+        color: rgb(91, 91, 91);
+        float: right;
+    }
+
+    #insertedBox tr:first-of-type {
+        position: relative;
+    }
+
+    #insertedBox tr:first-of-type a.shrink {
+        position: absolute;
+        width: 2rem;
+        height: 1rem;
+        top: -1.5rem;
+        right: calc(-10rem + 6vw);
+        background-color: white;
+        font-size: 1rem;
+        color: rgb(91, 91, 91);
+        vertical-align: bottom;
+    }
+
+    #table-expand::before {     /* to avoid moving the screen at the begining of the table when opened */
+        content: '';
+        display: block;
+        height: 60vh; /* increase the size of the box at where the anchor should focus after visited*/
+        margin-top: -60vh; /* move the contents as where they were */
+        visibility: hidden;
+    }
 
     /*######################### end main #####################################*/
 
