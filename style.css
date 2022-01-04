@@ -589,7 +589,17 @@ picture p {
     grid-column: 1;
 }
 
+#insertedBox fieldset label::after {
+    padding-left: 0.2rem;
+    content: "*";
+    color: var(--blue);
+}
+
 #termsField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.2rem;
     margin: 1rem 0 0.9rem 0;
 }
 
@@ -598,6 +608,8 @@ picture p {
     border: 2px solid rgb(223, 223, 223);
 }
 
-
-
-
+#termsField label::before {
+    padding-right: 0.2rem;
+    content: "*";
+    color: var(--blue);
+}
