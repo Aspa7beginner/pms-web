@@ -166,8 +166,8 @@
          grid-row: 4;
     }
 
-    /* for the table */
 
+    /* for the table */
     #insertedBox table th,
     #insertedBox table td,
     #insertedBox {
@@ -184,23 +184,28 @@
 
     /* end table part */
 
-    /* start form */
 
+    /* start form */
     picture > p {
         text-align: start;
+        font-size: 1rem;
     }
     
     #insertedBox form {
         max-width: 95vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
     }
 
     #insertedBox fieldset {
         grid-template-columns: auto;
-        gap: 1rem 0;
+        gap: 1.3rem 0;
     }
 
     #insertedBox label,
-    #insertedBox form input {
+    #insertedBox form input,
+    #insertedBox form select {
         font-size: 1rem;
     }
 
@@ -216,7 +221,8 @@
     #insertedBox legend {
         font-size: 1.4rem;
     }
-
+    /* end form */
+    
     /*######################### end main #####################################*/
 
 

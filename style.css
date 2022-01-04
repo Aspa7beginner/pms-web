@@ -589,7 +589,9 @@ picture p {
     grid-column: 1;
 }
 
-#insertedBox fieldset label::after {
+#account label::after,
+#profile label::after,
+#contact label[for="mobile"]::after {
     padding-left: 0.2rem;
     content: "*";
     color: var(--blue);
