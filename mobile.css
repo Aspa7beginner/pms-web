@@ -9,22 +9,24 @@
     }
 
     .responsive-active-only {
-        pointer-events: unset; /*deactivates links */
+        pointer-events: unset; /* deactivates links */
     }
+
     /*################ removed elements ##############################*/
 
     .footer-item1,   /* already in main navigation*/
     .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
-    #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section in the aside */
+    #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section from the aside */
     {
         display: none;
     } 
 
-    #topHeaderRow li a[href='#'] { /* to hide the text in the link - later if there are urls the seclector needs to change ex. href$=... - so that there won't be a problem with inpage links */
-        color:transparent;
-        font-size: 0;
+    #topHeaderRow li a[href='#'] { /* to hide the text in the link - later if there are urls the seclector needs to change ex. href$=... - so that there won't be a problem with in page links */
         line-height: 0;
+        font-size: 0;
+        color:transparent;
     }
+
     /*################ end removed elements ########################*/
     
     .grid-container {
@@ -67,8 +69,8 @@
 
     #logoRow input {
         width: 70vw;
-        border: 0px;
         padding: 0.8rem;
+        border: 0px;
         border-right: 1px solid var(--bg-gray);
         border-radius: 0;
     }
@@ -106,8 +108,7 @@
         grid-template-columns: calc(100vw - 4rem) 4rem;
         grid-template-areas:
                             "nav-item2 nav-item1"
-                            "nav-item2 ."
-                            ;
+                            "nav-item2 .";
     }
 
     #mainNavigationRow nav > a {
@@ -118,9 +119,10 @@
         left: 0vw;
         transition: left 0.5s ease-out;
     }
+
     #mainNavigationRow nav > a i {
+        margin: 1rem;
         font-size: 2rem;
-        margin: 1rem ;
     }
 
     #mainNavigationRow nav ul {
@@ -149,8 +151,8 @@
     /*########################## main ##############################*/
 
     #details {
-        display: grid;
         max-width: 90vw;
+        display: grid;
         grid-row-gap: 1rem;
     }   
 
@@ -166,7 +168,6 @@
          grid-row: 4;
     }
 
-
     /* for the table */
     #insertedBox table th,
     #insertedBox table td,
@@ -176,9 +177,9 @@
     }
     
     #insertedBox table caption {
-        background-color: white;
         border-bottom: 1px solid var(--bg-gray);
-        border-radius: 0;
+        border-radius: 0;       
+        background-color: white;
         font-size: 1.3em;
     }
 
@@ -210,9 +211,9 @@
     }
 
     #insertedBox button {
-        font-size: 1rem;
         width: 70%;
         padding: 0.7rem;
+        font-size: 1rem;
     }
     .fieldItem {
         width: 80vw;
@@ -255,9 +256,10 @@
     .item button {
         background-color: rgb(79, 171, 169);
     }
+
     .similarTitle a {
-        color: rgb(91, 91, 91);
         font-size: 1rem;
+        color: rgb(91, 91, 91);
     } 
 
     /*########## end similar products #############################################*/
@@ -301,14 +303,16 @@
     #cartInfo h3 {
         grid-area: cart-item1;
         border-radius: 0;
-        color: var(--blue);
         background-color: rgba(255, 255, 255, 0.979);
         font-size: 1.3rem;
         font-weight: bold;
+        color: var(--blue);
     }
+
     .cartItem {
         padding: 0.5rem;
     }
+
     .cart-container {
         row-gap: 1rem;
     }
@@ -316,10 +320,10 @@
     #cartInfo .close::after {
         top: -2rem;
         right: 0;
-        font-size: 1.3rem;
         width: 2rem;
         height: 2rem;
         background-color: inherit;
+        font-size: 1.3rem;
         color: var(--blue);
     }
 
@@ -332,15 +336,15 @@
     /* ### end cart ### */
 
     .popularCategory {
-        border: 0;
         max-width: 93vw;
+        border: 0;
     }
 
     .popularCategory h3 {
-        color: rgb(91, 91, 91);
-        background-color: var(--white);
         border: 0;
+        background-color: var(--white);
         font-size: 1.3rem;
+        color: rgb(91, 91, 91);
     }
 
     .popularCategory:nth-child(2) ul{
@@ -348,9 +352,8 @@
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: scroll;
-
-        column-gap: 1.5rem;
         text-align: center;
+        column-gap: 1.5rem;
     }
 
     .popularCategory:nth-child(2) li {
@@ -361,12 +364,12 @@
     }
 
     .popularCategory:nth-child(2) li a {
-        font-size: 1rem;
-        color: rgb(91, 91, 91);
-        box-shadow: 0 1px 2px 1px rgba(88, 88, 88, 0.2), 0 3px 7px 0 rgba(78, 78, 78, 0.19);
-        font-weight: bold;
-        padding: 0.5rem;
         max-width: 70%;
+        padding: 0.5rem;
+        box-shadow: 0 1px 2px 1px rgba(88, 88, 88, 0.2), 0 3px 7px 0 rgba(78, 78, 78, 0.19);
+        font-size: 1rem;
+        font-weight: bold;
+        color: rgb(91, 91, 91);
     }
 
     .popularCategory:last-child * {
@@ -388,8 +391,8 @@
     .footer-item4 .input,
     .footer-item4 button {
         padding: 1rem;
-        font-size: min(4.5vw, 2rem);
         border-radius: 0;
+        font-size: min(4.5vw, 2rem);
     }
 
     .footer-item4 fieldset {
@@ -432,13 +435,13 @@
 
     .footer-item4 legend {
         position: absolute;
+        padding-top: .5rem;       
         bottom: calc(50vh + 12rem);
         width: 17rem;
-        padding-top: .5rem;       
-        color: white;
         font-size: 1.5rem;
         text-align: start;
         text-shadow: 1px 2px 1pc black;
+        color: white;
     }
 
     .footer-item4 a[href$=appear] {
@@ -447,5 +450,4 @@
     }
 
     /*#################### end footer #######################################*/
-
 }

@@ -73,8 +73,9 @@ img {
 }
 
 .responsive-active-only {
-    pointer-events: none;
+    pointer-events: unset; /* deactivates links */
 }
+
 /*########### end general ##########################################################*/
 
 
@@ -377,7 +378,7 @@ footer h4 {
 }
 
 footer li {
-    padding: 1.2rem 0 0 0;
+    padding-bottom: 1.2rem;
 }
 
 /* footer just ordered section */
@@ -431,29 +432,13 @@ footer li {
 
 /* footer copyright */
 
-@media (max-width: 700px){
-    .item3 {
-        text-align: center;
-    }
-    .footer-item5{
-        padding: 0.5rem;
-        border-radius: 0;
-        background-color: #3A3A3A;
-        font-size: min(2.5vw, 0.8rem);
-        text-align: center;
-        color: rgb(172, 172, 172);
-    }
-
-    .footer-item5 span {
-        display: inline-block;
-    }
-
-    footer > div {
-        padding: 0;
-    }
-}
-
 @media (min-width: 701px){
+    
+    div[class^="footer-item"] {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
 
     .item3 {
         position: relative;
@@ -480,7 +465,6 @@ footer li {
         float: right;
     }
 }
-
 
 /* end footer copyright */
 
@@ -615,3 +599,497 @@ picture p {
     content: "*";
     color: var(--blue);
 }
+
+
+
+
+
+
+
+
+
+/*################ mobile design ################*/
+
+
+
+
+
+
+@media (max-width: 700px) {
+    * {
+        font-size: min(4vw, 1em);
+    }
+
+    .responsive-effects {    /* design in footer for dropdown icons in general additional elements for mobile*/
+        display: unset;
+        text-align: center;
+    }
+
+    .responsive-active-only {
+        pointer-events: unset; /* deactivates links */
+    }
+
+    /*################ removed elements ##############################*/
+
+    .footer-item1,   /* already in main navigation*/
+    .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
+    #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section from the aside */
+    {
+        display: none;
+    } 
+
+    #topHeaderRow li a[href='#'] { /* to hide the text in the link - later if there are urls the seclector needs to change ex. href$=... - so that there won't be a problem with in page links */
+        line-height: 0;
+        font-size: 0;
+        color:transparent;
+    }
+
+    /*################ end removed elements ########################*/
+    
+    .grid-container {
+        grid-gap: 2%;
+    }
+
+    /*################## header ###################################*/
+    h1 {
+        padding-left: 1rem;
+    }
+
+    #topHeaderRow > p {
+        font-size: min(3vw, 1em);
+    }
+
+    #topHeaderRow > p a {
+        font-size: min(4vw, 1em);
+        font-weight: bolder;
+    }
+
+    #topHeaderRow li {
+        padding: 0 0.5rem;
+    }
+
+    #logoRow {
+        grid-area: row3;
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 0.5rem;
+    }
+
+    #logoRow form {
+        width: 90vw;
+        border: 1px solid var(--bg-gray)
+    }
+
+    #logoRow button {
+        border: 0;
+    }
+
+    #logoRow input {
+        width: 70vw;
+        padding: 0.8rem;
+        border: 0px;
+        border-right: 1px solid var(--bg-gray);
+        border-radius: 0;
+    }
+
+    #logoRow form label {
+        font-size: 1px;
+    }
+
+    #mainNavigationRow {
+        grid-area: row2;
+        padding: 0.5rem;
+    }
+
+    #mainNavigationRow > a {
+        grid-area: nav-container-item1;
+    }
+
+    #mainNavigationRow > a i {
+        font-size: 1.7rem;
+        color: rgb(34, 34, 34);
+    }
+
+    
+    #mainNavigationRow nav {
+        grid-area: nav-container-item2;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        left: -100vw;
+        top:0;
+        background-color: rgba(34, 34, 34, 0.877);
+        border: 0;
+        border-radius: 0;
+        display: grid;
+        grid-template-columns: calc(100vw - 4rem) 4rem;
+        grid-template-areas:
+                            "nav-item2 nav-item1"
+                            "nav-item2 .";
+    }
+
+    #mainNavigationRow nav > a {
+        grid-area: nav-item1;
+    }
+
+    #mainNavigationRow nav:target{
+        left: 0vw;
+        transition: left 0.5s ease-out;
+    }
+
+    #mainNavigationRow nav > a i {
+        margin: 1rem;
+        font-size: 2rem;
+    }
+
+    #mainNavigationRow nav ul {
+        grid-area: nav-item2;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        background-color: rgb(248, 248, 248);
+
+    }
+
+    #mainNavigationRow nav ul::before {
+        padding: 3rem 0 0 1rem;
+        height: 14vw;
+        content: "Art Store";
+        font-family: 'Leckerli One', cursive;
+        font-weight: bold;
+        font-size: 2rem;
+        color: var(--white);
+        background-color: rgba(34, 34, 34, 0.938);
+
+    }
+    /*################## header ###################################*/
+
+
+    /*########################## main ##############################*/
+
+    #details {
+        max-width: 90vw;
+        display: grid;
+        grid-row-gap: 1rem;
+    }   
+
+    picture {
+        text-align: center;
+    }
+
+    #portraitDesc {
+        grid-row: 3;
+    }
+
+    #insertedBox {
+         grid-row: 4;
+    }
+
+    /* for the table */
+    #insertedBox table th,
+    #insertedBox table td,
+    #insertedBox {
+        border:0; 
+        font-size: min(3vw, 1em);
+    }
+    
+    #insertedBox table caption {
+        border-bottom: 1px solid var(--bg-gray);
+        border-radius: 0;       
+        background-color: white;
+        font-size: 1.3em;
+    }
+
+    /* end table part */
+
+
+    /* start form */
+    picture > p {
+        text-align: start;
+        font-size: 1rem;
+    }
+    
+    #insertedBox form {
+        max-width: 95vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    #insertedBox fieldset {
+        grid-template-columns: auto;
+        gap: 1.3rem 0;
+    }
+
+    #insertedBox label,
+    #insertedBox form input,
+    #insertedBox form select {
+        font-size: 1rem;
+    }
+
+    #insertedBox button {
+        width: 70%;
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+    .fieldItem {
+        width: 80vw;
+    }
+
+    #insertedBox legend {
+        font-size: 1.4rem;
+    }
+    /* end form */
+    
+    /*######################### end main #####################################*/
+
+
+    /*########## similar products as a vertical scroll bar ###################*/
+
+    #productsRow {
+        max-width: 93vw;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding-top: 1rem;
+        background-color: rgb(240, 240, 240);
+    }
+
+    .item {
+        margin: 0 0 1.5rem 2rem;
+        border: 0;
+        justify-content: middle;
+    }
+    
+    .item img {
+        border: 5px solid rgba(68, 68, 70, 0.884);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .item > div {
+        text-align: center;
+    }
+
+    .item button {
+        background-color: rgb(79, 171, 169);
+    }
+
+    .similarTitle a {
+        font-size: 1rem;
+        color: rgb(91, 91, 91);
+    } 
+
+    /*########## end similar products #############################################*/
+    
+    .main-item3 {
+        flex-direction: column-reverse;
+    }
+
+    /*### cart aside ####*/
+
+    #cartInfo {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -100vw;
+        top:0;
+        border: 0;
+        font-size: 1.5em;
+        display: grid;
+        align-items: stretch;
+        justify-items: stretch;
+        grid-template-rows: 10vw auto;
+        grid-template-areas: 'cart-item1'
+                             'cart-item2';
+    }
+    
+    #cartInfo:target {
+        right: 0vw;
+        transition: right 0.5s ease-out;
+    }
+
+    .cartItem,
+    .cartText {
+        font-size: 1.2rem;
+    }
+    
+    #cartInfo button{
+        font-size: 1rem;
+    }
+
+    #cartInfo h3 {
+        grid-area: cart-item1;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.979);
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--blue);
+    }
+
+    .cartItem {
+        padding: 0.5rem;
+    }
+
+    .cart-container {
+        row-gap: 1rem;
+    }
+
+    #cartInfo .close::after {
+        top: -2rem;
+        right: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: inherit;
+        font-size: 1.3rem;
+        color: var(--blue);
+    }
+
+    #cartInfo>div{
+        grid-area: cart-item2;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.973);
+
+    }
+    /* ### end cart ### */
+
+    .popularCategory {
+        max-width: 93vw;
+        border: 0;
+    }
+
+    .popularCategory h3 {
+        border: 0;
+        background-color: var(--white);
+        font-size: 1.3rem;
+        color: rgb(91, 91, 91);
+    }
+
+    .popularCategory:nth-child(2) ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        text-align: center;
+        column-gap: 1.5rem;
+    }
+
+    .popularCategory:nth-child(2) li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .popularCategory:nth-child(2) li a {
+        max-width: 70%;
+        padding: 0.5rem;
+        box-shadow: 0 1px 2px 1px rgba(88, 88, 88, 0.2), 0 3px 7px 0 rgba(78, 78, 78, 0.19);
+        font-size: 1rem;
+        font-weight: bold;
+        color: rgb(91, 91, 91);
+    }
+
+    .popularCategory:last-child * {
+        display: inline-flex;
+        column-gap: 0.8rem;
+    }
+
+    /*########## end aside #############################################*/
+
+
+
+    /*#################### footer ################################################*/
+    
+    .item3 {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+    footer h4 {
+        padding-bottom: 1rem;
+    }
+    footer > div {
+        padding: 0;
+    }
+    
+    .footer-item4 form {
+        width: 17rem;
+        row-gap: 1rem;
+    }
+
+    .footer-item4 .input,
+    .footer-item4 button {
+        padding: 1rem;
+        border-radius: 0;
+        font-size: min(4.5vw, 2rem);
+    }
+
+    .footer-item4 fieldset {
+        display: none;
+    }
+
+    .footer-item4 fieldset:target {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        background-color: rgba(91, 91, 91, 0.959);   
+    }
+
+    .close {
+        position: relative;
+        display: block;
+    }
+
+    .close::after {
+        position: absolute;
+        right: -1rem;
+        top: -4rem;/* inside the form, so it needs negative value to move at the top of the screen */
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.712);
+        content: "×";
+        font-size: 1.5rem;
+        color: rgba(91, 91, 91);
+    } 
+
+    .footer-item4 legend {
+        position: absolute;
+        padding-top: .5rem;       
+        bottom: calc(50vh + 12rem);
+        width: 17rem;
+        font-size: 1.5rem;
+        text-align: start;
+        text-shadow: 1px 2px 1pc black;
+        color: white;
+    }
+
+    .footer-item4 a[href$=appear] {
+        padding-left: 1vw ;
+        color: rgb(91, 91, 91);
+    }
+
+    .footer-item5{
+        padding: 0.5rem;
+        border-radius: 0;
+        background-color: #3A3A3A;
+        font-size: min(2.5vw, 0.8rem);
+        text-align: center;
+        color: rgb(172, 172, 172);
+    }
+    
+    .footer-item5 span {
+        display: inline-block;
+    }
+    /*#################### end footer #######################################*/
+}
+

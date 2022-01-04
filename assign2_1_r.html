@@ -14,7 +14,7 @@
             .main-container {
                 display: grid;
                 grid-template-areas: 'main' 'similar' 'aside';
-                grid-gap: 20px;
+                grid-gap: 0 20px;
                 padding: 10px;
             }
 
@@ -28,7 +28,7 @@
                 display: grid;
                 grid-template-columns: repeat(5, 1fr) 1.2fr;
                 grid-template-areas: 'main main main main main aside''similar similar similar similar similar aside';
-                grid-gap: 3%;
+                grid-gap: 2rem;
             }
 
             .container {
@@ -76,8 +76,6 @@
             .main-item1 {
                 grid-area: main;
                 display: grid;
-                grid-auto-rows: min-content;
-                align-content: stretch;
                 gap: 1rem 2rem;
                 grid-template-areas: 
                     "portrait-name portrait-name"
@@ -90,7 +88,7 @@
                 max-width: 1300px;
                 margin: auto;
                 /* γιατί υπερχείλιση περιεχομένου στο main??????
-                border: solid 1px#0963ae; */
+                border: solid 1px#0963ae;*/
             }
         }
         
@@ -152,7 +150,7 @@
     </style>
     <link href="css/all.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="mobile.css" rel="stylesheet">
+
 </head>
 
 <body>
