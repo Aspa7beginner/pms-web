@@ -9,7 +9,7 @@
     }
 
     .responsive-active-only {
-        pointer-events: unset;
+        pointer-events: unset; /*deactivates links */
     }
     /*################ removed elements ##############################*/
 
@@ -169,6 +169,8 @@
          grid-row: 4;
     }
 
+    /* for the table */
+
     #insertedBox table th,
     #insertedBox table td,
     #insertedBox {
@@ -183,7 +185,13 @@
         font-size: 1.3em;
     }
 
+    /* end table part */
 
+    /* start form */
+
+    picture > p {
+        text-align: start;
+    }
     /*######################### end main #####################################*/
 
 
@@ -225,49 +233,6 @@
     
     .main-item3 {
         flex-direction: column-reverse;
-    }
-
-    .popularCategory {
-        border: 0;
-        max-width: 93vw;
-    }
-
-    .popularCategory h3 {
-        color: rgb(91, 91, 91);
-        background-color: var(--white);
-        border: 0;
-        font-size: 1.3rem;
-    }
-
-    .popularCategory:nth-child(2) ul{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-
-        column-gap: 1.5rem;
-        text-align: center;
-    }
-
-    .popularCategory:nth-child(2) li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 1rem;
-    }
-
-    .popularCategory:nth-child(2) li a {
-        font-size: 1rem;
-        color: rgb(91, 91, 91);
-        box-shadow: 0 1px 2px 1px rgba(88, 88, 88, 0.2), 0 3px 7px 0 rgba(78, 78, 78, 0.19);
-        font-weight: bold;
-        padding: 0.5rem;
-        max-width: 70%;
-    }
-
-    .popularCategory:last-child * {
-        display: inline-flex;
-        column-gap: 0.8rem;
     }
 
     /*### cart aside ####*/
@@ -334,6 +299,49 @@
 
     }
     /* ### end cart ### */
+
+    .popularCategory {
+        border: 0;
+        max-width: 93vw;
+    }
+
+    .popularCategory h3 {
+        color: rgb(91, 91, 91);
+        background-color: var(--white);
+        border: 0;
+        font-size: 1.3rem;
+    }
+
+    .popularCategory:nth-child(2) ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+
+        column-gap: 1.5rem;
+        text-align: center;
+    }
+
+    .popularCategory:nth-child(2) li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .popularCategory:nth-child(2) li a {
+        font-size: 1rem;
+        color: rgb(91, 91, 91);
+        box-shadow: 0 1px 2px 1px rgba(88, 88, 88, 0.2), 0 3px 7px 0 rgba(78, 78, 78, 0.19);
+        font-weight: bold;
+        padding: 0.5rem;
+        max-width: 70%;
+    }
+
+    .popularCategory:last-child * {
+        display: inline-flex;
+        column-gap: 0.8rem;
+    }
 
     /*########## end aside #############################################*/
 
