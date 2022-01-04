@@ -229,6 +229,7 @@
 
     .popularCategory {
         border: 0;
+        max-width: 93vw;
     }
 
     .popularCategory h3 {
@@ -243,7 +244,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: scroll;
-        max-width: 93vw;
+
         column-gap: 1.5rem;
         text-align: center;
     }
