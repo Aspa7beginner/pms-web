@@ -16,7 +16,6 @@
     .footer-item1,   /* already in main navigation*/
     .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
     #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section in the aside */
-    , .popularCategory
     {
         display: none;
     } 
@@ -219,13 +218,55 @@
     }
     .similarTitle a {
         color: rgb(91, 91, 91);
-        font-size: 1rem;
+        font-size: 1.2rem;
     } 
 
+    .item button a {
+        font-size: 1rem;
+    }
     /*########## end similar products #############################################*/
     
-    /*### cart aside ####*/
+    .main-item3 {
+        flex-direction: column-reverse;
+    }
 
+    .popularCategory {
+        border: 0;
+    }
+
+    .popularCategory h3 {
+        color: rgb(91, 91, 91);
+        background-color: var(--white);
+        border: 0;
+        font-size: 1.5rem;
+    }
+
+    .popularCategory:nth-child(2) ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        max-width: 93vw;
+        column-gap: 1rem;
+        text-align: center;
+    }
+
+    .popularCategory:nth-child(2) li a {
+        font-size: 1.2rem;
+        color: rgb(91, 91, 91);
+        text-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+    }
+
+    .popularCategory:last-child * {
+        display: inline-flex;
+        column-gap: 0.8rem;
+    }
+
+    .popularCategory ul {
+        font-size: 1.2rem;
+    }
+    /*### cart aside ####*/
 
     #cartInfo {
         position: fixed;
@@ -288,8 +329,9 @@
         background-color: rgba(255, 255, 255, 0.973);
 
     }
+    /* ### end cart ### */
 
-    /*########## end similar products #############################################*/
+    /*########## end aside #############################################*/
 
 
 
