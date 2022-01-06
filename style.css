@@ -623,7 +623,7 @@ picture p {
 
 @media (max-width: 700px) {
     * {
-        font-size: min(4vw, 1em);
+        font-size: min(4vw, 1rem);
     }
 
     .responsive-effects {    /* design in footer for dropdown icons in general additional elements for mobile*/
