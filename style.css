@@ -747,7 +747,7 @@ picture p {
         display: flex;
         flex-direction: column;
         border-radius: 0;
-        background-color: rgb(248, 248, 248);
+        background-color: white;
 
     }
 
@@ -959,11 +959,15 @@ picture p {
 
     .popularCategory h3 {
         border: 0;
-        background-color: var(--white);
+        background-color: white;
         font-size: 1.3rem;
         color: rgb(91, 91, 91);
+        padding-bottom: 1rem;
     }
 
+    .popularCategory ul {
+        padding: 0 1rem;
+    }
     .popularCategory:nth-child(2) ul{
         display: flex;
         flex-direction: row;
