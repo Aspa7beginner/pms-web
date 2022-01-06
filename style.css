@@ -1,15 +1,21 @@
 /* this css file is organized in sections, separated by ### comment lines
-    for better navigation. The sections are:
+    for better navigation (Ctrl + F). The sections are:
     - general styles
     - header styles
     - main styles
     - similar products section styles
     - aside styles
     - footer styles
-    - at the very bottom styles about the table/form section in main
-        (varies in content through the different html files of the 2nd project) 
-
+    - container with variant content (the table/form section in main)
+    - mobile design
+        > removed elements
+        > header
+        > mail
+        > similar products
+        > aside 
+        > footer
 */
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Lato&family=Leckerli+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:wght@300&display=swap');
 
 /*############# general #######################################################*/
@@ -709,7 +715,6 @@ picture p {
         font-size: 1.7rem;
         color: rgb(34, 34, 34);
     }
-
     
     #mainNavigationRow nav {
         grid-area: nav-container-item2;
@@ -881,6 +886,8 @@ picture p {
 
     /*########## end similar products #############################################*/
     
+
+    /*########## aside #############################################*/
     .main-item3 {
         flex-direction: column-reverse;
     }
@@ -1032,7 +1039,7 @@ picture p {
         display: none;
     }
 
-    .footer-item4 fieldset:target {
+    #contact-form-appear:target {
         position: fixed;
         top: 0vh;
         left: 0vw;
