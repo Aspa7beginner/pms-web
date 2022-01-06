@@ -519,7 +519,7 @@ picture p {
     margin-top: 1.5rem;
 }
 
-#insertedBox fieldset div {
+.fieldItem {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -541,7 +541,7 @@ picture p {
     font-weight: bolder;
 }
 
-#insertedBox form input { 
+.fieldItem input { 
     max-width: 80%;
     padding: 0.55rem;
     border: 1px solid rgb(223, 223, 223);
@@ -549,7 +549,7 @@ picture p {
     font-size: 0.75rem;
 }
 
-#insertedBox input[type="date"]{
+.fieldItem input[type="date"]{
     max-width: 70%;
     padding: 0.8rem;
 }
