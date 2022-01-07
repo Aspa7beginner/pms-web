@@ -225,17 +225,18 @@ main a{
 
 /*########## similar products #######################################################*/
 
+.main-item2 h3 {
+    padding-bottom: 0.7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
 #productsRow{
     display: flex;
     flex: min-content;
     flex-wrap: wrap;
     gap: 1rem;
-}
-
-.main-item2 h3 {
-    padding-bottom: 0.7rem;
-    font-size: 1.3rem;
-    font-weight: bold;
 }
 
 .item {
@@ -303,6 +304,7 @@ aside h3 {
     --bg-gray: rgb(217, 237, 247);
     padding: 0.5rem;
     border-bottom: 2px solid var(--bg-gray);
+    border-radius: 0;
     background-color: var(--bg-gray);
     font-weight: bold;
     color: rgb(105, 154, 177);
@@ -333,14 +335,14 @@ aside li {
     font-size: 0.7rem;
 }
 
-.cart-container div:last-of-type button{
-    font-size: 0.75rem;
-}
-
 .cartItem {
     display: flex;
     align-items: center;
     padding: 0 1rem 1rem 0;
+}
+
+.cart-container div:last-of-type button{
+    font-size: 0.75rem;
 }
 
 .cartItem p {
@@ -734,17 +736,18 @@ picture p {
                             "nav-item2 .";
     }
 
-    #mainNavigationRow nav > a {
+    #navigationMain > a {
         grid-area: nav-item1;
     }
 
-    #mainNavigationRow nav:target{
+    #navigationMain:target {
         left: 0vw;
         transition: left 0.5s ease-out;
     }
 
     #mainNavigationRow nav > a i {
         margin: 1rem;
+        font-size: 2rem;
     }
 
     #mainNavigationRow nav ul {
