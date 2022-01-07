@@ -304,6 +304,7 @@ aside h3 {
     --bg-gray: rgb(217, 237, 247);
     padding: 0.5rem;
     border-bottom: 2px solid var(--bg-gray);
+    border-radius: 0;
     background-color: var(--bg-gray);
     font-weight: bold;
     color: rgb(105, 154, 177);
@@ -334,14 +335,14 @@ aside li {
     font-size: 0.7rem;
 }
 
-.cart-container div:last-of-type button{
-    font-size: 0.75rem;
-}
-
 .cartItem {
     display: flex;
     align-items: center;
     padding: 0 1rem 1rem 0;
+}
+
+.cart-container div:last-of-type button{
+    font-size: 0.75rem;
 }
 
 .cartItem p {
@@ -397,7 +398,7 @@ footer li {
     row-gap: 0.9rem;
 }
 
-.footer-item3 > div > a:any-link { 
+.footer-item3 > div > a { 
     float: left;
     margin-right: 2%;
     margin-bottom: 1%;
@@ -417,13 +418,14 @@ footer li {
     flex-direction: column;
     row-gap: 0.5rem;
 }
+
 .field {
     display: flex;
     flex-direction: column;
     border: 2px solid var(--bg-gray);
 }
 
-.input {
+.input-field {
     padding: 2%;
 }
 
@@ -735,20 +737,21 @@ picture p {
                             "nav-item2 .";
     }
 
-    #mainNavigationRow nav > a {
+    #navigationMain > a {
         grid-area: nav-item1;
     }
 
-    #mainNavigationRow nav:target{
+    #navigationMain:target {
         left: 0vw;
         transition: left 0.5s ease-out;
     }
 
-    #mainNavigationRow nav > a i {
+    #navigationMain > a i {
         margin: 1rem;
+        font-size: 2rem;
     }
 
-    #mainNavigationRow nav ul {
+    #navigationMain ul {
         grid-area: nav-item2;
         display: flex;
         flex-direction: column;
@@ -757,7 +760,7 @@ picture p {
 
     }
 
-    #mainNavigationRow nav ul::before {
+    #navigationMain ul::before {
         padding: 3rem 0 0 1rem;
         height: 14vw;
         content: "Art Store";
