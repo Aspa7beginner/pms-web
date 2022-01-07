@@ -643,8 +643,7 @@ picture p {
 
     .footer-item1,   /* already in main navigation*/
     .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
-    #topHeaderRow li:nth-child(n+3), /* unnecessary, when clicking on cart there is a transition activating the cart section from the aside */
-    .popularCategory
+    #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section from the aside */
     {
         display: none;
     } 
