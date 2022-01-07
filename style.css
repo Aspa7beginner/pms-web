@@ -398,7 +398,7 @@ footer li {
     row-gap: 0.9rem;
 }
 
-.footer-item3 > div > a:any-link { 
+.footer-item3 > div > a { 
     float: left;
     margin-right: 2%;
     margin-bottom: 1%;
@@ -418,13 +418,14 @@ footer li {
     flex-direction: column;
     row-gap: 0.5rem;
 }
+
 .field {
     display: flex;
     flex-direction: column;
     border: 2px solid var(--bg-gray);
 }
 
-.input {
+.input-field {
     padding: 2%;
 }
 
@@ -642,7 +643,8 @@ picture p {
 
     .footer-item1,   /* already in main navigation*/
     .footer-item3,   /* there is a link for the cart so it takes unnecessary space */
-    #topHeaderRow li:nth-child(n+3) /* unnecessary, when clicking on cart there is a transition activating the cart section from the aside */
+    #topHeaderRow li:nth-child(n+3), /* unnecessary, when clicking on cart there is a transition activating the cart section from the aside */
+    .popularCategory
     {
         display: none;
     } 
