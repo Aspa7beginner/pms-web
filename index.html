@@ -10,7 +10,7 @@
             margin: 0px 0px;
         }
         
-        @media (max-width: 700px) {
+        @media (max-width: 979px) {
             .main-container {
                 display: grid;
                 grid-template-areas: 'main' 'similar' 'aside';
@@ -22,13 +22,13 @@
                 display: contents;  /*remove unwanted space (avoid horizontal scrolling/overflow)*/           
             }
         }
-        
-        @media (min-width: 701px) {
+
+        @media (min-width: 980px) {
             .main-container {
                 display: grid;
                 grid-template-columns: repeat(5, 1fr) 1.2fr;
                 grid-template-areas: 'main main main main main aside''similar similar similar similar similar aside';
-                grid-gap: 3%;
+                grid-gap: 20px;
             }
 
             .container {
@@ -100,7 +100,7 @@
             grid-area: similar;
             /* αντιστοιχεί ονόματα στα items του grid*/
         }
-        
+
         .main-item3 {
             grid-area: aside;
             display:flex;
@@ -142,7 +142,7 @@
         .footer-item3 {
             grid-area: footer3;
         }
-        
+
         .footer-item4 {
             grid-area: footer4;
         }
@@ -151,8 +151,8 @@
             grid-area: copy;
         }
     </style>
-    <link href="css/all.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css1/all.css" rel="stylesheet">
+    <link href="css1/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -186,9 +186,9 @@
                 <!-- end logoRow -->
         
                 <div id="mainNavigationRow">
-                    <a href="#navigationMain" class="responsive-effects"><i class="fas fa-bars"></i></a>
+                    <a href="#navigationMain" class="responsive-effects not-in-tablet"><i class="fas fa-bars"></i></a>
                     <nav id="navigationMain">
-                        <a href="#" class="responsive-effects"><i class="far fa-window-close"></i></a>
+                        <a href="#" class="responsive-effects not-in-tablet"><i class="far fa-window-close"></i></a>
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About Us</a></li>
@@ -213,7 +213,7 @@
 
                         <picture>
                             <p>- Last Item viewed</p>
-                            <source media="screen and (max-width:600px)" srcset="images/113010-m.jpg">
+                            <source media="screen and (max-width:900px)" srcset="images/113010-m.jpg">
                             <img src="images/113010.jpg" class="img-thumbnail img-responsive" alt="Self-portrait in a Straw Hat" />
                         </picture>
 
@@ -417,10 +417,10 @@
                     </div>
                     
                     <div class="footer-item4" id="form-disappear">
-                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects"><i class="fas fa-caret-square-up"></i></a></h4>
+                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects  not-in-tablet"><i class="fas fa-caret-square-up"></i></a></h4>
                         <fieldset id="contact-form-appear">  
                             <legend class="responsive-effects">Contact</legend> 
-                            <form> <a tabindex= "1" href="#form-disappear" class="close"></a>
+                            <form> <a tabindex= "1" href="#form-disappear" class="close  not-in-tablet"></a>
                                 <div class="field">
                                     <label for="name">Name</label>
                                     <input type="text" id="name" class="input-field" name="name" placeholder="Enter Name ..." pattern="[A-Za-z\.\- ]+[A-Za-z]$" title="only a-z A-Z . -">

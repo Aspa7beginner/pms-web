@@ -1,208 +1,201 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/be3ff5ad85.js" crossorigin="anonymous"></script>
-        <style>
-            body {
-                margin: 0px 0px;
-            }
-            
-            @media (max-width: 979px) {
-                .main-container {
-                    display: grid;
-                    grid-template-areas: 'main' 'similar' 'aside';
-                    grid-gap: 20px;
-                    padding: 10px;
-                }
-    
-                .container {
-                    display: contents;  /*remove unwanted space (avoid horizontal scrolling/overflow)*/           
-                }
-            }
-    
-            @media (min-width: 980px) {
-                .main-container {
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr) 1.2fr;
-                    grid-template-areas: 'main main main main main aside''similar similar similar similar similar aside';
-                    grid-gap: 20px;
-                }
-    
-                .container {
-                    max-width: 1300px;
-                    margin: auto;
-                }
-            }
-            
-            .grid-container {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be3ff5ad85.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0px 0px;
+        }
+        
+        @media (max-width: 700px) {
+            .main-container {
                 display: grid;
-                /* κάθε γραμμή του πλέγματος περικλείεται σε αποστρόφους */
-                grid-template-areas: 'header header header header header header' 'main main main main main main' 'footer footer footer footer footer footer';
-                grid-gap: 3% 10px;
+                grid-template-areas: 'main' 'similar' 'aside';
+                grid-gap: 20px;
+                padding: 10px;
             }
-            
-            .item1 {
-                grid-area: header;
-                /* αντιστοιχεί ονόματα στα items του grid*/
+
+            .container {
+                display: contents;  /*remove unwanted space (avoid horizontal scrolling/overflow)*/           
             }
-            
-            .item2 {
+        }
+        
+        @media (min-width: 701px) {
+            .main-container {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr) 1.2fr;
+                grid-template-areas: 'main main main main main aside''similar similar similar similar similar aside';
+                grid-gap: 20px;
+            }
+
+            .container {
+                max-width: 1300px;
+                margin: auto;
+            }
+        }
+        
+        .grid-container {
+            display: grid;
+            /* κάθε γραμμή του πλέγματος περικλείεται σε αποστρόφους */
+            grid-template-areas: 'header header header header header header' 'main main main main main main' 'footer footer footer footer footer footer';
+            grid-gap: 3% 10px;
+        }
+        
+        .item1 {
+            grid-area: header;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .item2 {
+            grid-area: main;
+        }
+        
+        .item3 {
+            grid-area: footer;
+            background-color: rgb(231, 231, 231);
+        }
+        
+        @media (max-width: 700px) {
+            .main-item1 {
                 grid-area: main;
-            }
-            
-            .item3 {
-                grid-area: footer;
-                background-color: rgb(231, 231, 231);
-            }
-            
-            @media (max-width: 700px) {
-                .main-item1 {
-                    grid-area: main;
-                    display: grid;
-                    grid-row-gap: 1rem;
-                    grid-template-areas: 
-                        "portrait-name"
-                        "artist"
-                        "portrait" 
-                        "details";
-                    /* αντιστοιχεί ονόματα στα items του grid*/
-                }
-            }
-    
-            @media (min-width: 701px) {
-                .main-item1 {
-                    grid-area: main;
-                    display: grid;
-                    grid-auto-rows: min-content;
-                    justify-content: start;
-                    gap: 1rem 2rem;
-                    grid-template-columns: 1fr 2fr;
-                    grid-template-areas: 
-                        "portrait-name portrait-name"
-                        "artist artist"
-                        "portrait details";
-                    /* αντιστοιχεί ονόματα στα items του grid*/
-                }
-    
-                .container {
-                    max-width: 1300px;
-                    margin: auto;
-                    /* γιατί υπερχείλιση περιεχομένου στο main??????
-                    border: solid 1px#0963ae; */
-                }
-            }
-            
-            
-            .main-item2 {
-                grid-area: similar;
+                display: grid;
+                grid-row-gap: 1rem;
+                grid-template-areas: 
+                    "portrait-name"
+                    "artist"
+                    "portrait" 
+                    "details";
                 /* αντιστοιχεί ονόματα στα items του grid*/
             }
-    
-            .main-item3 {
-                grid-area: aside;
-                display:flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-self: stretch;
-                flex-wrap: nowrap;
-                row-gap: 2rem;
-            }
-            
-            @media (max-width: 700px) {
-                .footer-container {
-                    display: grid;
-                    grid-template-areas: 'footer1' 'footer2' 'footer3' 'footer4' 'copy';
-                    grid-gap: 5px;
-                }
-            }
-    
-            @media (min-width: 701px) {
-                .footer-container {
-                    display: grid;
-                    grid-column-gap: 2rem;
-                    grid-template-columns: repeat(4, 1fr);
-                    grid-template-areas: 'footer1 footer2 footer3 footer4''copy copy copy copy';
-                    margin-top: 1em;
-                }
-            }
-            
-            .footer-item1 {
-                grid-area: footer1;
+        }
+
+        @media (min-width: 701px) {
+            .main-item1 {
+                grid-area: main;
+                display: grid;
+                grid-auto-rows: min-content;
+                align-content: stretch;
+                gap: 1rem 2rem;
+                grid-template-areas: 
+                    "portrait-name portrait-name"
+                    "artist artist"
+                    "portrait details";
                 /* αντιστοιχεί ονόματα στα items του grid*/
             }
-            
-            .footer-item2 {
-                grid-area: footer2;
-                /* αντιστοιχεί ονόματα στα items του grid*/
+
+            .container {
+                max-width: 1300px;
+                margin: auto;
             }
-            
-            .footer-item3 {
-                grid-area: footer3;
+        }
+        
+        
+        .main-item2 {
+            grid-area: similar;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .main-item3 {
+            grid-area: aside;
+            display:flex;
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+        
+        @media (max-width: 700px) {
+            .footer-container {
+                display: grid;
+                grid-template-areas: 'footer1' 'footer2' 'footer3' 'footer4' 'copy';
+                grid-gap: 5px;
             }
-    
-            .footer-item4 {
-                grid-area: footer4;
+        }
+
+        @media (min-width: 701px) {
+            .footer-container {
+                display: grid;
+                grid-column-gap: 2rem;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: 'footer1 footer2 footer3 footer4''copy copy copy copy';
+                margin-top: 1em;
             }
-            
-            .footer-item5 {
-                grid-area: copy;
-            }
-        </style>
-        <link href="css1/all.css" rel="stylesheet">
-        <link href="css1/style.css" rel="stylesheet">
-    </head>
-    
-    <body>
-    
-        <div class="grid-container">
-    
-            <header class="item1">
-                <div class="container"> 
-                    <div id="topHeaderRow">
-                        <p>Welcome to <a href="#">Art Store</a>, <a href="#">Login</a> or <a href="#"> Create new account</a>
-                        <nav>
-                            <ul>
-                                <li><i class="fas fa-user"></i><a href="#"> My Account</a></li>
-                                <li><a href="#cartInfo" class="responsive-active-only"><i class="fas fa-shopping-cart"></i></a><a href="#"> Shopping Cart</a></li>
-                                <li><i class="fas fa-gift"></i><a href="#"> Wish List</a></li>
-                                <li><i class="fas fa-arrow-right"></i><a href="#"> Checkout</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- end topHeaderRow -->
-            
-                    <div id="logoRow">
-                        <h1>Art Store</h1>
-            
-                        <form>
-                            <label for="search">Search</label>
-                            <input type="text" placeholder="Search" name="search">
-                            <button type="submit"><span class="fas fa-search"></span></button>
-                        </form>
-                    </div>
-                    <!-- end logoRow -->
-            
-                    <div id="mainNavigationRow">
-                        <a href="#navigationMain" class="responsive-effects not-in-tablet"><i class="fas fa-bars"></i></a>
-                        <nav id="navigationMain">
-                            <a href="#" class="responsive-effects not-in-tablet"><i class="far fa-window-close"></i></a>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Art Works</a></li>
-                                <li><a href="#">Artists</a></li>
-                                <li><a href="#">Specials </a></li>
-                            </ul>
-            
-                        </nav>
-                    </div>
-                    <!-- end mainNavigationRow -->        
+        }
+        
+        .footer-item1 {
+            grid-area: footer1;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .footer-item2 {
+            grid-area: footer2;
+            /* αντιστοιχεί ονόματα στα items του grid*/
+        }
+        
+        .footer-item3 {
+            grid-area: footer3;
+        }
+        
+        .footer-item4 {
+            grid-area: footer4;
+        }
+        
+        .footer-item5 {
+            grid-area: copy;
+        }
+    </style>
+    <link href="css/all.css" rel="stylesheet"> <!-- μαζί με την άσκηση -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <header class="item1">
+            <div class="container"> 
+                <div id="topHeaderRow">
+                    <p>Welcome to <a href="#">Art Store</a>, <a href="#">Login</a> or <a href="#"> Create new account</a>
+                    <nav>
+                        <ul>
+                            <li><i class="fas fa-user"></i><a href="#"> My Account</a></li>
+                            <li><a href="#cartInfo" class="responsive-active-only"><i class="fas fa-shopping-cart"></i></a><a href="#"> Shopping Cart</a></li>
+                            <li><i class="fas fa-gift"></i><a href="#"> Wish List</a></li>
+                            <li><i class="fas fa-arrow-right"></i><a href="#"> Checkout</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-    
+                <!-- end topHeaderRow -->
+        
+                <div id="logoRow">
+                    <h1>Art Store</h1>      
+                    <form>
+                        <label for="search">Search</label>
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><span class="fas fa-search"></span></button>
+                    </form>
+                </div>
+                <!-- end logoRow -->
+        
+                <div id="mainNavigationRow">
+                    <a href="#navigationMain" class="responsive-effects"><i class="fas fa-bars"></i></a>
+                    <nav id="navigationMain">
+                        <a href="#" class="responsive-effects"><i class="far fa-window-close"></i></a>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Art Works</a></li>
+                            <li><a href="#">Artists</a></li>
+                            <li><a href="#">Specials </a></li>
+                        </ul>
+        
+                    </nav>
+                </div>
+                <!-- end mainNavigationRow -->        
+            </div>
+        </header>
+
 
         <div class="item2">
             <div class="container">
@@ -211,7 +204,7 @@
                         <h2>Self-portrait in a Straw Hat</h2>
                         <p>By <a href="#">Louise Elisabeth Lebrun</a></p>
                         <picture>
-                            <source media="screen and (max-width:900px)" srcset="images/113010-m.jpg">
+                            <source media="screen and (max-width:600px)" srcset="images/113010-m.jpg">
                             <img src="images/113010.jpg" class="img-thumbnail img-responsive" alt="Self-portrait in a Straw Hat" />
                         </picture>
 
@@ -437,10 +430,10 @@
                     </div>
                     
                     <div class="footer-item4" id="form-disappear">
-                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects  not-in-tablet"><i class="fas fa-caret-square-up"></i></a></h4>
+                        <h4><i class="fas fa-envelope"></i> Contact us <a href="#contact-form-appear" class="responsive-effects"><i class="fas fa-caret-square-up"></i></a></h4>
                         <fieldset id="contact-form-appear">  
                             <legend class="responsive-effects">Contact</legend> 
-                            <form> <a tabindex= "1" href="#form-disappear" class="close  not-in-tablet"></a>
+                            <form> <a tabindex= "1" href="#form-disappear" class="close"></a>
                                 <div class="field">
                                     <label for="name">Name</label>
                                     <input type="text" id="name" class="input-field" name="name" placeholder="Enter Name ..." pattern="[A-Za-z\.\- ]+[A-Za-z]$" title="only a-z A-Z . -">
@@ -457,7 +450,7 @@
                             </form>
                         </fieldset>
                     </div>
-
+                    
                     <div class="footer-item5">
                         <p>All images are copyright to their owners. This is just a hypothetical site
                             <span>&copy; 2021 Copyright Art Store</span></p>
