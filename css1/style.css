@@ -637,7 +637,7 @@ picture p {
     /*################ end removed elements ########################*/
     
 
-    #logoRow {
+    #logoRow {      /* for logo and search bar to be one under the other */
         grid-area: row3;
         flex-direction: column;
         align-items: stretch;
@@ -661,7 +661,7 @@ picture p {
         border-radius: 0;
     }
 
-    #logoRow form label {
+    #logoRow form label {   /* for accessibility but not displayed on screen */
         font-size: 1px;
     }
 
@@ -679,18 +679,18 @@ picture p {
         color: rgb(34, 34, 34);
     }
     
-    #mainNavigationRow nav {
+    #mainNavigationRow nav {    /* main navigation out of doc flow */
         grid-area: nav-container-item2;
         position: fixed;
         width: 100vw;
-        height: 100vh;
+        height: 100vh;  /* vh, vw units to adjust to different screens */
         left: -100vw;
         top:0;
         border: 0;
         border-radius: 0;
         background-color: rgba(34, 34, 34, 0.877);
         display: grid;
-        grid-template-columns: calc(100vw - 4rem) 4rem;
+        grid-template-columns: calc(100vw - 4rem) 4rem; /* for the close sigh and the rest of the container */
         grid-template-areas:
                             "nav-item2 nav-item1"
                             "nav-item2 .";
@@ -719,7 +719,7 @@ picture p {
 
     }
 
-    #navigationMain ul::before {
+    #navigationMain ul::before {        /* adding the logo in the main navigation menu */
         padding: 3rem 0 0 1rem;
         height: 14vw;
         content: "Art Store";
@@ -735,7 +735,7 @@ picture p {
 
     /*########################## main ##############################*/
 
-    #details {
+    #details {      /* product description and table/form */
         max-width: 90vw;
         display: grid;
         grid-row-gap: 1rem;
@@ -837,11 +837,11 @@ picture p {
         font-size: min(4.5vw, 2rem);
     }
 
-    .footer-item4 fieldset {
+    .footer-item4 fieldset { /* initially hidden */
         display: none;
     }
 
-    #contact-form-appear:target {
+    #contact-form-appear:target {   /* form appear once clicking on the icon link */
         position: fixed;
         top: 0vh;
         left: 0vw;
@@ -883,7 +883,7 @@ picture p {
         font-size: 0.7rem;
     }
 
-    .footer-item5 span {
+    .footer-item5 span { /* to be at the right side of the container */
         display: inline-block;
         font-size: 0.7rem;
     }
@@ -909,7 +909,7 @@ picture p {
         font-size: min(4vw, 1rem);
     }
 
-    .responsive-effects {    /* design in footer for dropdown icons in general additional elements for mobile*/
+    .responsive-effects {    /* design in footer for dropdown icons, in general additional elements for mobiles/tablets */
         display: unset;
         text-align: center;
     }
@@ -961,7 +961,7 @@ picture p {
     /*################## similar products ###################################*/
     
     
-    #productsRow {
+    #productsRow {      /* the section containing similar products */
         max-width: 93vw;
         display: flex;
         flex-wrap: nowrap;
@@ -1007,7 +1007,7 @@ picture p {
 
     /*### cart aside ####*/
 
-    #cartInfo {
+    #cartInfo {     /* cart section outside of document flow */
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -1073,7 +1073,6 @@ picture p {
 
     /* ### end cart ### */
 
-
     .popularCategory {
         max-width: 93vw;
         border: 0;
@@ -1121,7 +1120,7 @@ picture p {
         column-gap: 0.8rem;
     }
 
-    /*########## end aside #############################################*/
+    /*######################### end aside ###############3###*/
 
 
     /* cart and footer form minimization */
@@ -1176,7 +1175,7 @@ picture p {
         padding: 10px;
     }
     
-    .main-item3 {
+    .main-item3 {   /* aside first popular genres next popular artists */
         flex-direction: column-reverse;
         row-gap: 0;
     }
@@ -1185,12 +1184,13 @@ picture p {
         max-width: 95vw;
     }
 
-    #navigationMain > a {
+    #navigationMain > a { /* three bar icon on main menu is not visible, all menu items are visible */
         display: none;
 
     }
 
-    #insertedBox fieldset {
+
+    #insertedBox fieldset {     /* form items devided in two columns */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1rem;
@@ -1200,14 +1200,13 @@ picture p {
         width: 50%;
     }
 
-    .popularCategory:nth-child(2) li
-    {
+    .popularCategory:nth-child(2) li {      /* for flex items to have fixed sizes in popular artists category */
         flex-basis: 180px;
         flex-grow: 0;
 	    flex-shrink: 0;
     }
 
-    #productsRow .item {
+    #productsRow .item {    /* similarly for similar products */
         flex-basis: 250px;
         flex-grow: 0;
 	    flex-shrink: 0;
